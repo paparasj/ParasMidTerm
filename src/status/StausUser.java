@@ -8,12 +8,21 @@ package status;
 /**
  * june 24th
  * @author srinivsi
+ * @ Paras Patel
  */
 public class StausUser 
 {
-   public void statusDetail(String code)
+
+   
+    public enum Choice{ZERO,ONE,TWO,THREE,DEFAULT};
+    public Choice choice;
+
+    public Choice getChoice() {
+        return choice;
+    }
+   public void statusDetail(Choice code)
 {
-switch(code.toUpperCase())
+switch(code.toString().toUpperCase())
         {
         case "ZERO": System.out.println("REJECTED");
         break;
@@ -30,5 +39,8 @@ switch(code.toUpperCase())
         break;
         }
 }
+    void statusDetail(String code) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
  
 }
